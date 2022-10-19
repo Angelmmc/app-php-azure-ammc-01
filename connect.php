@@ -2,7 +2,7 @@
 $port = 1433;
 $serverName = "tcp:ammc-db-01.database.windows.net," . $port;
 $database = "world_azure";
-$userName = "User";
+$userName = "Student";
 $password = "Pa55w.rd";
 
 try {
