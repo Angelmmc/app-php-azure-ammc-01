@@ -28,4 +28,4 @@ $results = $query -> fetchAll(PDO::FETCH_OBJ);
     // use exec() because no results are returned
     
 
-$conn = null;
+//$conn = null;
