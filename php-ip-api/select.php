@@ -3,7 +3,7 @@ include ('connect.php');
 
 $code = 'ES';
   
-$sql = "select world.country.name 'País', continent 'Continente', region 'Region',world.city.name 'Capital', code, code2 from [world].[country]
+$sql = "select world.country.name 'Pais', continent 'Continente', region 'Region',world.city.name 'Capital', code, code2 from [world].[country]
 inner join world.city on world.country.capital=world.city.id
 where code2='".$code."'"; 
 $query = $conn -> prepare($sql); 
