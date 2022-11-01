@@ -1,11 +1,20 @@
 <?php
 include ('connect.php');
 
-$code = 'ES';
+$metodo = $_SERVER["REQUEST_METHOD"];
+switch($metodo){
+  case "GET";
+      $codPais = $_GET['countrycode'];
+      
+  break;
+  case "POST";
+      $codPais = $_POST['countrycode'];
+  break;
+  }
   
-$sql = "select world.country.name 'Pais', continent 'Continente', region 'Region',world.city.name 'Capital', code, code2 from [world].[country]
+$sql = "select world.country.name 'País', continent 'Continente', region 'Region',world.city.name 'Capital', code, code2 from [world].[country]
 inner join world.city on world.country.capital=world.city.id
-where code2='".$code."'"; 
+where code2='".$codPais."'"; 
 $query = $conn -> prepare($sql); 
 $query -> execute(); 
 $results = $query -> fetchAll(PDO::FETCH_OBJ); 
