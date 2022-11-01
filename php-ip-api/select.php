@@ -37,7 +37,7 @@ if($query -> rowCount() > 0)   {
       <td>" . $result->Region . "</td>
       <td>" . $result->code . "</td>
       <td>" . $result->code2 . "</td>
-    </tr>";
+    </tr>"; 
   }
   echo "</table>";
 }
