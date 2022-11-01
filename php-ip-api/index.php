@@ -4,9 +4,7 @@ $curl = curl_init();
 $var = unserialize(file_get_contents('http://www.geoplugin.net/php.gp?ip='.$_SERVER['REMOTE_ADDR']));
 echo "La ip del cliente es: ".$var['geoplugin_request'];
 
-$var2 = unserialize(file_get_contents('http://www.geoplugin.net/php.gp?ip='.$var['geoplugin_request']));
-
-  $url = "https://backendapp-ammc-01.azurewebsites.net/php-ip-api/select.php/?countrycode=" . $var2['geoplugin_countryCode'];
+  $url = "https://backendapp-ammc-01.azurewebsites.net/php-ip-api/select.php/?countrycode=" . $varixd['geoplugin_countryCode'];
 
 
   curl_setopt($curl, CURLOPT_URL, $url);
