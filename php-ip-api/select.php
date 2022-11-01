@@ -12,7 +12,7 @@ switch($metodo){
   break;
   }
   
-$sql = "select world.country.name 'País', continent 'Continente', region 'Region',world.city.name 'Capital', code, code2 from [world].[country]
+$sql = "select world.country.name 'Pais', continent 'Continente', region 'Region',world.city.name 'Capital', code, code2 from [world].[country]
 inner join world.city on world.country.capital=world.city.id
 where code2='".$codPais."'"; 
 $query = $conn -> prepare($sql); 
@@ -22,7 +22,7 @@ $results = $query -> fetchAll(PDO::FETCH_OBJ);
 if($query -> rowCount() > 0)   { 
   echo "<table border='1px', padding='5px'>";
   echo "<tr>
-    <td>País</td>
+    <td>Pais</td>
     <td>Capital</td>
     <td>Continente</td>
     <td>Region</td>
