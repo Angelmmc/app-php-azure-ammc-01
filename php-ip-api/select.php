@@ -12,9 +12,7 @@ switch($metodo){
   break;
   }
   
-$sql = "select world.country.name 'Pais', continent 'Continente', region 'Region',world.city.name 'Capital', code, code2 from [world].[country]
-inner join world.city on world.country.capital=world.city.id
-where code2='".$codPais."'"; 
+$sql = "EXEC getPais @code ='".$codPais."'"; 
 $query = $conn -> prepare($sql); 
 $query -> execute(); 
 $results = $query -> fetchAll(PDO::FETCH_OBJ); 
