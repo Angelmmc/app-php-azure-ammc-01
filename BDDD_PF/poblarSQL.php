@@ -16,7 +16,7 @@ $query2 -> execute();
 $query3 = $conn3 -> prepare($sqlDel3); 
 $query3 -> execute();
 
-$curl_1 = curl_init('http://localhost:7882/BDDD_PF/getData.php');
+$curl_1 = curl_init('https://my-sites1-ammc.000webhostapp.com/BDDD_PF/getData.php');
 $curl_2 = curl_init('https://631f96f958a1c0fe9f6c4d28.mockapi.io/fruta');
 curl_setopt($curl_1, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($curl_2 , CURLOPT_RETURNTRANSFER, true);
