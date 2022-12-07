@@ -94,7 +94,7 @@ curl_multi_add_handle($mh, $curl_2);
 
 echo "<br>La insercion cruzada de datos fue exitosa";
 echo " <ul style='text-decoration: none; margin: 0; padding: 0; list-style-type: none;'>
-<li><a href='index.php'>Volver</a></li>
+<li><a href='https://my-sites1-ammc.000webhostapp.com/BDDD_PF/'>Volver</a></li>
 </ul>";
 
 $conn1 = null;
