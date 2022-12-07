@@ -1,6 +1,7 @@
 <?php
 header('Access-Control-Allow-Origin: *');
 include("conexiones/conexion_francia.php");
+echo "<center> <h3>Base de datos Francia</h3>";
 
 $sql = "select * from frutas1"; 
 
@@ -29,13 +30,13 @@ if($query1 -> rowCount() > 0)   {
       <td>" . $result->genero . "</td>
       <td>" . $result->familia . "</td>
       <td>" . $result->orden . "</td>
-      <td>" . $result->carbohidratos . "</td>
-      <td>" . $result->proteinas . "</td>
-      <td>" . $result->grasas . "</td>
-      <td>" . $result->calorias . "</td>
-      <td>" . $result->azucar . "</td>
+      <td>" . round($result->carbohidratos, 3) . "</td>
+      <td>" . round($result->proteinas, 3) . "</td>
+      <td>" . round($result->grasas, 3) . "</td>
+      <td>" . round($result->calorias, 3) . "</td>
+      <td>" . round($result->azucar,3 ) . "</td>
     </tr>"; 
   }
-  echo "</table>";
+  echo "</table> </center>";
 }
 ?>
