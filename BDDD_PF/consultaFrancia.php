@@ -4,7 +4,7 @@ include("conexiones/conexion_francia.php");
 
 $sql = "select * from frutas1"; 
 
-$query1 = $conn1 -> prepare($sql1); 
+$query1 = $conn1 -> prepare($sql); 
 $query1 -> execute();  
 $results = $query1 -> fetchAll(PDO::FETCH_OBJ); 
 
